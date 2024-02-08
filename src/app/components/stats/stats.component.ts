@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -13,6 +14,7 @@ export class StatsComponent {
   dataSet4 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet5 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet6 = this.getGeneratedLineData(this.randomArray(30, 1000));
+  faPlus = faPlus
 
   lineChartOptions: ChartOptions<'line'> = {
     responsive: false,
