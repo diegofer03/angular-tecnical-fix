@@ -29,10 +29,14 @@
   }
 }
 
+.fix{
+  height: 100%;
+}
+
 .section--hero {
   width: 100vw;
-    height: calc(100vh - 70px);
-    scroll-snap-align: start;
+  height: calc(100vh - 70px);
+  scroll-snap-align: start;
   // max-width: 760px;
   // max-height: 100%;
   // position: relative;
@@ -66,14 +70,17 @@
       flex-direction: column;
       text-align: center;
       justify-content: center;
+      height: 100%;
     }
     .flex_child--horizontal:first-of-type {
       padding: 30% 2rem 2rem 2rem;
+      height: 100%;
       h1 {
         margin-bottom: 30%;
       }
     }
     .flex_child--horizontal:last-of-type {
+
       max-width: 300px;
       margin: auto;
       display: none;

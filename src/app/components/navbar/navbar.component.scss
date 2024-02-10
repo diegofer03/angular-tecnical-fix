@@ -10,6 +10,7 @@ nav {
   letter-spacing: 3px;
   padding: 1.5rem;
   position: fixed;
+  max-height: $nav-height;
   top: 0;
   z-index: 3;
   transition: all 2s ease;

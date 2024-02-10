@@ -9,13 +9,9 @@
     top: $nav-height;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    margin-bottom: $nav-height;
     &::-webkit-scrollbar{
         display: none;
-    }
-    > * {
-      width: 100vw;
-      height: calc(100vh - $nav-height);
-      scroll-snap-align: start;
     }
   }
 }
