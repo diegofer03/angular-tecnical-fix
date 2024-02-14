@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { faCross, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ChartOptions } from 'chart.js';
 
@@ -37,7 +38,11 @@ export class StatsComponent {
     },
   };
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+    console.log(this.isBrowser)
+  }
+
+  isBrowser = isPlatformBrowser(this.platformId)
 
   randomArray(length: number, max: number) {
     return Array.apply(null, Array(length)).map(function () {
