@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { faCross, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ChartOptions } from 'chart.js';
+import { IntersectionStatus } from 'src/app/shared/directives/intersection-observer';
 
 @Component({
   selector: 'app-stats',
@@ -17,6 +18,11 @@ export class StatsComponent {
   dataSet6 = this.getGeneratedLineData(this.randomArray(30, 1000));
   faPlus = faPlus
   faCross = faCross
+  status: IntersectionStatus = IntersectionStatus.NotVisible
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 
   lineChartOptions: ChartOptions<'line'> = {
     responsive: false,

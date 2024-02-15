@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { IntersectionStatus } from 'src/app/shared/directives/intersection-observer';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -27,6 +28,12 @@ export class CustomersComponent {
     scrollbar: { draggable: true },
     loop: true,
   };
+
+  status: IntersectionStatus = IntersectionStatus.NotVisible
+
+  onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 
   customers: Customer[] = [
     {

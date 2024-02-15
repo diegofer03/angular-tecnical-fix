@@ -16,6 +16,8 @@ import { IntegrationsComponent } from './components/integrations/integrations.co
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { fromIntersectionObserver } from './shared/directives/intersection-observer';
+import { IntersectionObserverDirective } from './shared/directives/intersection.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HomeComponent } from './pages/home/home.component';
     IntegrationsComponent,
     CustomersComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    IntersectionObserverDirective,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,4 +1,10 @@
-<section id="section-customers" class="section--customers">
+<section id="section-customers" class="section--customers" appIntersectionObserver
+[intersectionDebounce]="-30"
+(visibilityChange)="onVisibilityChanged($event)"
+[style.opacity]="status === 'Visible' ? 1 : 0"
+[ngClass]="{
+  fadeInUp: status === 'Visible'
+}">
   <div class="section__container">
     <h4 class="title">What customers are saying</h4>
     <div class="slide__container">
